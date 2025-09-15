@@ -1,0 +1,20 @@
+{
+  "name": "crm-project",
+  "version": "1.0.0",
+  "description": "1. Set Environment Variables",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikhil-953/CRM-DASHBOARD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nikhil-953/CRM-DASHBOARD/issues"
+  },
+  "homepage": "https://github.com/Nikhil-953/CRM-DASHBOARD#readme"
+}
