@@ -32,7 +32,7 @@ function App() {
               <Route path="/segmentation" element={<Segmentation />} />
               <Route path="/campaign-creation" element={<CampaignCreation />} />
               <Route path="/campaign-report" element={<CampaignReport />} />
-              <Route path="/help" element={<Help />} />
+              
             </Routes>
           </div>
           <ChatBotButton />
