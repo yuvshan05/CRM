@@ -13,7 +13,7 @@ const nlpParserRoutes =require('./routes/nlpParser');
 const app = express();
 
 app.use(cors({
-  origin: '*',
+  origin: 'https://crm-frontend-jsq7.onrender.com',
   credentials: true,
 }));
 app.use(bodyParser.json());
