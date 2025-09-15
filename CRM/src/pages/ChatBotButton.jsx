@@ -35,7 +35,7 @@ function ChatBotButton() {
 
       try {
         
-        const nlpResponse = await fetch('http://localhost:5000/api/segments/nlp-parse', {
+        const nlpResponse = await fetch('https://crm-backend-y6st.onrender.com/api/segments/nlp-parse', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ prompt: userInput }),
@@ -48,7 +48,7 @@ function ChatBotButton() {
           setConditions(nlpData.conditions);
 
           
-          const previewResponse = await fetch('http://localhost:5000/api/segments/preview', {
+          const previewResponse = await fetch('https://crm-backend-y6st.onrender.com/api/segments/preview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ conditions: nlpData.conditions }),
@@ -87,7 +87,7 @@ function ChatBotButton() {
     if (step === 3) {
       
       try {
-        const response = await fetch('http://localhost:5000/api/segments', {
+        const response = await fetch('https://crm-backend-y6st.onrender.com/api/segments', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name: segmentName, conditions }),

@@ -8,7 +8,7 @@ const CampaignReport = () => {
   useEffect(() => {
     const fetchReports = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/campaigns/report');
+        const res = await axios.get('https://crm-backend-y6st.onrender.com/api/campaigns/report');
         setReports(res.data.reports || []);
       } catch (err) {
         console.error('Error fetching campaign reports:', err);

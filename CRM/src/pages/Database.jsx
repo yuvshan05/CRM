@@ -15,7 +15,7 @@ function Database() {
 
   const fetchData = async () => {
     try {
-      const customerResponse = await fetch('http://localhost:5000/api/customers');
+      const customerResponse = await fetch('https://crm-backend-y6st.onrender.com/api/customers');
       const customers = await customerResponse.json();
 
       setTotalCustomers(customers.length);
@@ -29,7 +29,7 @@ function Database() {
       setNewCustomers(newCustCount);
       setRepeatCustomers(repeatCustCount);
 
-      const orderResponse = await fetch('http://localhost:5000/api/orders');
+      const orderResponse = await fetch('https://crm-backend-y6st.onrender.com/api/orders');
       const orders = await orderResponse.json();
 
       setTotalOrders(orders.length);

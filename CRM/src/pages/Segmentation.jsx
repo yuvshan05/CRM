@@ -13,7 +13,7 @@ const [tooltipVisibleId, setTooltipVisibleId] = useState(null);
   
   const fetchSegments = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/segments');
+      const response = await fetch('https://crm-backend-y6st.onrender.com/api/segments');
       const data = await response.json();
       if (data.success) {
         setSegments(data.segments);
@@ -29,7 +29,7 @@ const [tooltipVisibleId, setTooltipVisibleId] = useState(null);
     if (!window.confirm("Are you sure you want to delete this segment?")) return;
   
     try {
-      const response = await fetch(`http://localhost:5000/api/segments/${segmentId}`, {
+      const response = await fetch(`https://crm-backend-y6st.onrender.com/api/segments/${segmentId}`, {
         method: 'DELETE',
       });
   
@@ -82,7 +82,7 @@ const [tooltipVisibleId, setTooltipVisibleId] = useState(null);
   
   const handlePreview = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/segments/preview', {
+      const response = await fetch('https://crm-backend-y6st.onrender.com/api/segments/preview', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ conditions }),
@@ -103,7 +103,7 @@ const [tooltipVisibleId, setTooltipVisibleId] = useState(null);
   
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/segments', {
+      const response = await fetch('https://crm-backend-y6st.onrender.com/api/segments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

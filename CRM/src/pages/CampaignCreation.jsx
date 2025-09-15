@@ -19,7 +19,7 @@ const CampaignCreation = () => {
   useEffect(() => {
     const fetchScheduledCampaigns = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/campaigns/scheduled');
+        const res = await axios.get('https://crm-backend-y6st.onrender.com/api/campaigns/scheduled');
         if (res.data.success) {
           setScheduledCampaigns(res.data.campaigns);
         }
@@ -34,7 +34,7 @@ const CampaignCreation = () => {
   useEffect(() => {
     const fetchSegments = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/segments');
+        const res = await axios.get('https://crm-backend-y6st.onrender.com/api/segments');
         if (res.data.success && Array.isArray(res.data.segments)) {
           setSegments(res.data.segments);
         } else {
@@ -59,7 +59,7 @@ const CampaignCreation = () => {
     setStatus('');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/campaigns/send', {
+      const res = await axios.post('https://crm-backend-y6st.onrender.com/api/campaigns/send', {
         communication_id: communicationId,
         merchant_id: merchantId,
         message_template: messageTemplate,
@@ -105,7 +105,7 @@ if (selectedTime <= now) {
 }
 
     try {
-      await axios.post('http://localhost:5000/api/campaigns/send', campaignData);
+      await axios.post('https://crm-backend-y6st.onrender.com/api/campaigns/send', campaignData);
       setStatus('✅ Campaign successfully saved and scheduled!');
     } catch (error) {
       setStatus('❌ Failed to schedule campaign');
